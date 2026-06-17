@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookAI</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      margin: 0;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: #cbd5f5;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    overflow: hidden;
+}
+
+.card p {
+    margin: 8px 0;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+     .badge{
+    background:#38bdf8;
+    color:#0f172a;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+    button {
+      padding: 10px 20px;
+      background: #38bdf8;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #0ea5e9
+    );
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background: #38bdf8;
+    color: #0f172a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+.hero a {
+    text-decoration: none;
+}
+
+    @media(max-width:768px){
+
+    .search-box input{
+        width:90%;
+        margin-bottom:10px;
+    }
+
+    .search-box button{
+        width:90%;
+        margin-left:0;
+    }
+
+    header{
+        flex-direction:column;
+    }
+
+    .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.hero button {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 30px;
+    background: #f59e0b;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(245,158,11,0.3);
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>BookAI - Book Recommendation System</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/recommend">Recommend</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+
+ <span class="badge">
+🤖 Machine Learning Powered
+</span>
+
+
+<section class="hero">
+
+    <h1>Discover Your Next Favorite Book</h1>
+
+    <p>
+        Explore top-rated books and find personalized recommendations
+        based on your reading interests.
+    </p>
+
+    <a href="/recommend">
+        <button>Start Exploring</button>
+    </a>
+
+</section>
+
+<h2>🔥 Top 50 Books</h2>
+
+<div class="grid">
+  {% for i in range(book_name|length) %}
+    <div class="card">
+      <img src="{{ image[i] }}">
+      <p>{{ book_name[i] }}</p>
+      <p>{{ author[i] }}</p>
+      <p>⭐ {{ rating[i] }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+<div style="text-align:center;">
+  <a href="/recommend">
+    <button>Get Recommendations</button>
+  </a>
+</div>
+
+</body>
+</html>

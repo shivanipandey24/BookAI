@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BookAI - Contact</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: #020617;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #cbd5f5;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 30px;
+        }
+
+        .about-card {
+            max-width: 850px;
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            text-align: center;
+        }
+
+        .about-card h2 {
+            color: #38bdf8;
+            margin-bottom: 25px;
+            font-size: 36px;
+        }
+
+        .about-card p {
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .about-card strong {
+            color: #38bdf8;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #334155;
+            margin: 25px 0;
+        }
+
+        .contact-links p {
+            font-size: 18px;
+            margin: 12px 0;
+        }
+
+        .contact-links a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .contact-links a:hover {
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+        }
+
+        @media(max-width:768px){
+
+    .search-box input{
+        width:90%;
+        margin-bottom:10px;
+    }
+
+    .search-box button{
+        width:90%;
+        margin-left:0;
+    }
+
+    header{
+        flex-direction:column;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>BookAI - Book Recommendation System</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/recommend">Recommend</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<div class="about-container">
+
+    <div class="about-card">
+
+        <h2>About the Developer</h2>
+
+        <p>
+            Hi! I'm <strong>SHIVANI PANDEY</strong>, a Computer Science student
+            passionate about Artificial Intelligence, Machine Learning,
+            and software development.
+        </p>
+
+        <p>
+            As someone who genuinely enjoys reading books, I often found it
+            difficult to discover new books after finishing one I loved.
+            That inspired me to build <strong>BookAI</strong>, a machine
+            learning-powered recommendation system designed to help readers
+            discover books similar to their interests.
+        </p>
+
+        <p>
+            This project combines two of my passions: <strong>reading</strong>
+            and <strong>technology</strong>. Using collaborative filtering,
+            similarity-based recommendations, Flask, and Python, I created
+            a platform that helps users find their next favorite book.
+        </p>
+
+        <hr>
+
+        <div class="contact-links">
+
+
+
+            <p>
+                💻 GitHub:
+                <a href="https://github.com/shivanipandey24" target="_blank">
+                    https://github.com/shivanipandey24
+                </a>
+            </p>
+
+            <p>
+                🔗 LinkedIn:
+                <a href="https://linkedin.com/in/shivanipandey-cse" target="_blank">
+                   https://linkedin.com/in/shivanipandey-cse
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 BookAI | Built with Flask & Machine Learning ❤️
+</footer>
+
+</body>
+</html>
